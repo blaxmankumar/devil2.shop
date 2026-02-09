@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Battula Laxman Kumar | DevOps Engineer</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0b1120;
+    --card:#111827;
+    --primary:#38bdf8;
+    --accent:#22d3ee;
+    --text:#e5e7eb;
+    --muted:#9ca3af;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    scroll-behavior:smooth;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+section{
+    padding:90px 0;
+}
+
+h2{
+    font-family:'Orbitron', sans-serif;
+    margin-bottom:40px;
+    color:var(--primary);
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    width:100%;
+    background:var(--bg);
+    border-bottom:1px solid #1f2937;
+    z-index:1000;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    font-family:'Orbitron', sans-serif;
+    color:var(--accent);
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:var(--accent);
+}
+
+/* TERMINAL */
+.terminal{
+    background:#000;
+    padding:25px;
+    border-radius:8px;
+    font-family:monospace;
+    margin-top:120px;
+    box-shadow:0 0 30px rgba(34,211,238,0.1);
+}
+
+.terminal span{
+    color:var(--accent);
+}
+
+/* HERO */
+.hero h1{
+    font-size:42px;
+    margin-top:40px;
+}
+
+.hero p{
+    margin-top:20px;
+    color:var(--muted);
+    max-width:650px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:var(--primary);
+    color:black;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:var(--accent);
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card);
+    padding:25px;
+    border-radius:8px;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(56,189,248,0.1);
+}
+
+.card h3{
+    margin-bottom:12px;
+    color:var(--accent);
+}
+
+.card p{
+    font-size:14px;
+    color:var(--muted);
+}
+
+.card a{
+    color:var(--primary);
+    font-size:14px;
+    text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px 0;
+    border-top:1px solid #1f2937;
+    color:var(--muted);
+}
+
+/* ANIMATION */
+.fade{
+    opacity:0;
+    transform:translateY(30px);
+    transition:0.8s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+    <div class="logo">BLK</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
+</header>
+
+<div class="container hero" id="about">
+
+    <div class="terminal">
+        <span>$</span> whoami <br>
+        Battula Laxman Kumar <br><br>
+        <span>$</span> role <br>
+        DevOps Engineer
+    </div>
+
+    <h1>Building Scalable Cloud & Automation Systems</h1>
+
+    <p>
+        DevOps Engineer specializing in AWS infrastructure, CI/CD automation,
+        Docker containerization, Linux production servers and secure cloud architecture.
+    </p>
+
+    <a href="resume.pdf" class="btn" download>Download Resume</a>
+
+</div>
+
+<section id="experience" class="fade">
+<div class="container">
+<h2>Experience</h2>
+<div class="card">
+<h3>DevOps Engineer</h3>
+<p>Designed CI/CD pipelines, managed AWS infrastructure, configured production Linux servers, automated deployments and implemented monitoring solutions.</p>
+</div>
+</div>
+</section>
+
+<section id="projects" class="fade">
+<div class="container">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card">
+<h3>CI/CD Automation Pipeline</h3>
+<p>Dockerized application with GitHub Actions auto deployment to AWS.</p>
+<a href="https://github.com/yourusername/project1" target="_blank">View on GitHub →</a>
+</div>
+
+<div class="card">
+<h3>AWS Static Website Hosting</h3>
+<p>Hosted secure website using S3 + CloudFront + Route53.</p>
+<a href="https://github.com/yourusername/project2" target="_blank">View on GitHub →</a>
+</div>
+
+<div class="card">
+<h3>Production Linux Server Setup</h3>
+<p>Configured Nginx, SSL, firewall and automated deployment pipeline.</p>
+<a href="https://github.com/yourusername/project3" target="_blank">View on GitHub →</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="certifications" class="fade">
+<div class="container">
+<h2>Certifications</h2>
+<div class="grid">
+<div class="card">
+<h3>AWS Certification</h3>
+<p>AWS Cloud Practitioner / Associate level certification.</p>
+</div>
+<div class="card">
+<h3>DevOps Certification</h3>
+<p>CI/CD, Docker, Linux & Cloud Infrastructure specialization.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="fade">
+<div class="container">
+<h2>Contact</h2>
+<p>Email: yourmail@example.com</p>
+<p>GitHub: github.com/yourusername</p>
+</div>
+</section>
+
+<footer>
+© 2026 Battula Laxman Kumar | DevOps Engineer
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const appearOptions = {
+threshold: 0.3
+};
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer){
+entries.forEach(entry=>{
+if(!entry.isIntersecting){
+return;
+}else{
+entry.target.classList.add("show");
+observer.unobserve(entry.target);
+}
+});
+}, appearOptions);
+
+faders.forEach(fader=>{
+appearOnScroll.observe(fader);
+});
+</script>
+
+</body>
+</html>
